@@ -4,19 +4,21 @@
 
 <container>
     <h1 class="data-field" id="data">0</h1>
-    <button onclick="" id='data-1'>1</button>
-    <button onclick="" id='data-2'>2</button>
-    <button onclick="" id='data-3'>3</button>
-    <button onclick="" id='data-4'>4</button>
-    <button onclick="" id='data-2'>5</button>
-    <button onclick="" id='data-3'>6</button>
-    <button onclick="" id='data-4'>7</button>
-    <button onclick="" id='data-2'>8</button>
-    <button onclick="" id='data-3'>9</button>
-    <button onclick="" id='data-4'>0</button>
-    <button onclick="" id='data-4'>-</button>
-    <button onclick="" id='data-4'>+</button>
-    <button onclick="" id='data-4'>AC</button>
+    <button id='data-1'>1</button>
+    <button id='data-2'>2</button>
+    <button id='data-3'>3</button>
+    <button id='data-4'>4</button>
+    <button id='data-5'>5</button>
+    <button id='data-6'>6</button>
+    <button id='data-7'>7</button>
+    <button id='data-8'>8</button>
+    <button id='data-9'>9</button>
+    <button id='data-0'>0</button>
+    <button id='data-plus'>-</button>
+    <button id='data-minus'>+</button>
+    <button id='data-times'>*</button>
+    <button id='data-clear'>AC</button>
+    <button id='data-equals'>=</button>
 
 
 
@@ -27,13 +29,28 @@
     $("button").click(function() {
     const data_field = document.getElementById("data");
     const data_added = this;
+    console.log(typeof(data_added.id))
     end_data = data_field.innerHTML + data_added.innerHTML;
-    if (end_data[0] == 0 || end_data[0]  == '+' || end_data[0]  == '-'){
+    if (data_added.id == 'data-clear'){
+        data_field.innerHTML = 0;
+    }
+    else{
+        if(data_added.id == 'data-equals'){
+            calculation = data_field.innerHTML;
+            data = eval(calculation)
+            data_field.innerHTML = data;
+        }
+        else{
+            if (end_data[0] == 0 || end_data[0]  == '+' || end_data[0]  == '-'){
         data_field.innerHTML = data_added.innerHTML;
     }
     else{
         data_field.innerHTML = end_data;
     }
+        }
+
+    }
+
     });
 </script>
 
