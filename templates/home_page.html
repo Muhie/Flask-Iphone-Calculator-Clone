@@ -1,0 +1,39 @@
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<container>
+    <h1 class="data-field" id="data">0</h1>
+    <button onclick="" id='data-1'>1</button>
+    <button onclick="" id='data-2'>2</button>
+    <button onclick="" id='data-3'>3</button>
+    <button onclick="" id='data-4'>4</button>
+    <button onclick="" id='data-2'>5</button>
+    <button onclick="" id='data-3'>6</button>
+    <button onclick="" id='data-4'>7</button>
+    <button onclick="" id='data-2'>8</button>
+    <button onclick="" id='data-3'>9</button>
+    <button onclick="" id='data-4'>0</button>
+    <button onclick="" id='data-4'>-</button>
+    <button onclick="" id='data-4'>+</button>
+    <button onclick="" id='data-4'>AC</button>
+
+
+
+</container>
+
+
+<script>
+    $("button").click(function() {
+    const data_field = document.getElementById("data");
+    const data_added = this;
+    end_data = data_field.innerHTML + data_added.innerHTML;
+    if (end_data[0] == 0 || end_data[0]  == '+' || end_data[0]  == '-'){
+        data_field.innerHTML = data_added.innerHTML;
+    }
+    else{
+        data_field.innerHTML = end_data;
+    }
+    });
+</script>
+
