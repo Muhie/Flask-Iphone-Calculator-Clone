@@ -7,7 +7,7 @@ body{
 }
 .screen {
     float: right;
-    margin-right: 10vw;
+    margin-right: 16vw;
     color: white;
     padding: 0 0 15px 0;
     font-size: 4rem;
@@ -15,12 +15,12 @@ body{
 
 }
 .keyboard {
-    min-width: 100vw;
+    min-width: 90vw;
     margin: 10vw;
     display: grid;
     grid-gap: 20px;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(5,  1fr);
+    grid-template-columns: repeat(4, 0.5fr);
+    grid-template-rows: repeat(5,  0.5fr);
 }
 .button{
     color: white;
@@ -68,8 +68,8 @@ body{
 <container class="calculator">
     <div class="keyboard">
     <button class='special-button-gray' id='data-clear'>AC</button>
-    <button class='special-button-gray' id='data-clear'>AC</button>
-    <button class='special-button-gray' id='data-clear'>AC</button>
+    <button class='special-button-gray' id='data-plus-minus'>±</button>
+    <button class='special-button-gray' id='data-percent'>%</button>
     <button class='special-button' id='data-divide'>/</button>
     <button class='button' id='data-9'>7</button>
     <button class='button' id='data-8'>8</button>
@@ -83,7 +83,9 @@ body{
     <button class='button' id='data-2'>2</button>
     <button class='button' id='data-1'>3</button>
     <button class='special-button' id='data-plus'>+</button>
-    <button class='button' id='data-0' style="min-width: 200px; border-radius: 0;">0</button>
+    <button class='button' id='data-0' style="min-width: 200px; border-radius: 0;     -moz-border-radius: 40px;
+    -webkit-border-radius: 40px;
+    border-radius: 40px;">0</button>
     <button class='button' id='data-float'>.</button>
     <button class='special-button' id='data-equals'>=</button>
     </div>
